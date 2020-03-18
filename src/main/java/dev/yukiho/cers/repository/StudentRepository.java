@@ -9,11 +9,13 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-@MapperScan({"dev.yukiho.cers.db.mapper"})
 public class StudentRepository {
 
-    @Autowired
     StudentMapper studentMapper;
+
+    public StudentRepository(@Autowired StudentMapper studentMapper) {
+        this.studentMapper = studentMapper;
+    }
 
     public Student insertStudent(Student record) {
         studentMapper.insertSelective(record);

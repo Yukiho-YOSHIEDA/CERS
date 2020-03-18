@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@MapperScan({"dev.yukiho.cers.db.mapper"})
 public class EventRepository {
 
     EventMapper eventMapper;
@@ -27,6 +26,14 @@ public class EventRepository {
 
     public Optional<Event> selectEventById(int id) {
         return Optional.ofNullable(eventMapper.selectByPrimaryKey(id));
+    }
+
+    public List<Event> selectEventByStudentId(String studentId) {
+        var example = new EventExample();
+        example.createCriteria()
+                .andStudentIdEqualTo(studentId);
+        example.setOrderByClause("created_at DESC");
+        return eventMapper.selectByExample(example);
     }
 
     public List<Event> selectAll() {

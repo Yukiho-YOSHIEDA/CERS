@@ -7,6 +7,8 @@
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"></plugin>
+
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/cers?useSSL=false"
                         userId="cers" password="cers"/>

@@ -21,9 +21,15 @@ public class EventService {
 
     public Event createEvent(String id, String mode, Date acceptedAt) {
         var event = new Event();
+        var modeEnum = ModeEnum.getModeByName(mode);
+
+        var lastEvent = eventRepository.selectEventByStudentId(id).stream()
+                .findFirst();
+
+        modeEnum.ensureLastEvent(lastEvent);
 
         event.setStudentId(id);
-        event.setMode(ModeEnum.getModeByName(mode).getId());
+        event.setMode(modeEnum.getId());
         event.setAcceptedAt(acceptedAt);
 
         var result = eventRepository.insertEvent(event);
