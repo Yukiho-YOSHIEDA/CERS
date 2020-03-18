@@ -6,6 +6,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 @MapperScan({"dev.yukiho.cers.db.mapper"})
 public class StudentRepository {
@@ -13,9 +15,13 @@ public class StudentRepository {
     @Autowired
     StudentMapper studentMapper;
 
-    public Student insertStudent(Student student) {
-        studentMapper.insertSelective(student);
-        return student;
+    public Student insertStudent(Student record) {
+        studentMapper.insertSelective(record);
+        return record;
+    }
+
+    public Optional<Student> selectById(String id) {
+        return Optional.ofNullable(studentMapper.selectByPrimaryKey(id));
     }
 
 }
