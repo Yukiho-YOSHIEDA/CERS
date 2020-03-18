@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mysql:
+    image: "mysql:8"
+    environment:
+      MYSQL_ROOT_PASSWORD: "cers"
+      MYSQL_DATABASE: "cers"
+      MYSQL_USER: "cers"
+      MYSQL_PASSWORD: "cers"
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./docker/mysql/data:/var/lib/mysql"

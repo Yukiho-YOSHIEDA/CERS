@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="schema" targetRuntime="MyBatis3">
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"></plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/cers?useSSL=false"
+                        userId="cers" password="cers"/>
+
+        <javaModelGenerator targetPackage="dev.yukiho.cers.db.model" targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="dev/yukiho/cers/db/mapper" targetProject="src/main/resources">
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="dev.yukiho.cers.db.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="student">
+        </table>
+        <table tableName="event">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
