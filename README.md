@@ -1,5 +1,10 @@
 # CERS - COVID-19 Entrance Recording System
 
+![eslint](https://github.com/Yukiho-YOSHIEDA/CERS/workflows/eslint/badge.svg?branch=master&event=push)
+![JUnit](https://github.com/Yukiho-YOSHIEDA/CERS/workflows/JUnit/badge.svg?branch=master&event=push)
+![Version 1.0](https://img.shields.io/badge/version-1.0-yellow.svg)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 This system record someone entered or leaved the room.
 
 ![Screenshots](./screenshots.png)
