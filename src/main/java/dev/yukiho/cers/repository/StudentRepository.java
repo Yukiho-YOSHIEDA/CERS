@@ -13,7 +13,8 @@ public class StudentRepository {
 
     StudentMapper studentMapper;
 
-    public StudentRepository(@Autowired StudentMapper studentMapper) {
+    @Autowired
+    public StudentRepository(StudentMapper studentMapper) {
         this.studentMapper = studentMapper;
     }
 

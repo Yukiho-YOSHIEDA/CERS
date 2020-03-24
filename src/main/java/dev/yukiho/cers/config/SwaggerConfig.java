@@ -31,7 +31,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("CERS API Spec")
-                .version("0.1")
+                .version("1.0")
                 .build();
     }
 }

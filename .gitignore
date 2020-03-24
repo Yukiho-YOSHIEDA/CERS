@@ -36,3 +36,6 @@ out/
 
 ### docker ###
 docker/
+
+### build by npm ##
+static/

@@ -15,7 +15,8 @@ public class EventRepository {
 
     EventMapper eventMapper;
 
-    public EventRepository(@Autowired EventMapper eventMapper) {
+    @Autowired
+    public EventRepository(EventMapper eventMapper) {
         this.eventMapper = eventMapper;
     }
 

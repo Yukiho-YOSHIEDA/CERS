@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'dev.yukiho'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
@@ -67,3 +67,4 @@ ext {
 
 apply from: 'flyway.gradle'
 apply from: 'mybatis.gradle'
+apply from: 'npm.gradle'
