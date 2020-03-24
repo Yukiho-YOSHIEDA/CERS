@@ -1,0 +1,16 @@
+task npmRunBuild() {
+    inputs.files("${rootDir}/front/public", "${rootDir}/front/src")
+    outputs.dir("${rootDir}/src/main/resources/static")
+    doLast {
+        if (!file("${rootDir}/front/node_modules").exists()) {
+            ["npm", "--prefix", "${rootDir}/front", "install", "${rootDir}/front"]
+                    .execute().waitForProcessOutput(System.out, System.err)
+        }
+        ["npm", "--prefix", "${rootDir}/front", "run", "build"]
+                .execute().waitForProcessOutput(System.out, System.err)
+    }
+}
+
+processResources {
+    dependsOn npmRunBuild
+}

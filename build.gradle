@@ -67,3 +67,4 @@ ext {
 
 apply from: 'flyway.gradle'
 apply from: 'mybatis.gradle'
+apply from: 'npm.gradle'
