@@ -32,4 +32,11 @@ public class RestControllerExceptionHandler {
     public ErrorOutputModel handleUnexpectedException(UnexpectedException e) {
         return new ErrorOutputModel(e.getMessage());
     }
+
+    // 500
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ErrorOutputModel handleException(Exception e) {
+        return new ErrorOutputModel(e.getMessage());
+    }
 }

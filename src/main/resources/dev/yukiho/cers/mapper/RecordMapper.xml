@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev.yukiho.cers.mapper.RecordMapper">
+    <resultMap id="BaseResultMap" type="dev.yukiho.cers.model.RecordModel">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="mode" jdbcType="INTEGER" property="mode"/>
+        <result column="accepted_at" jdbcType="TIMESTAMP" property="acceptedAt"/>
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt"/>
+    </resultMap>
+    <select id="selectAllRecord" resultMap="BaseResultMap">
+        select student.id as id, student.name as name, event.mode as mode, event.accepted_at as accepted_at, event.created_at as created_at
+        from student, event
+        where student.id = event.student_id
+        order by created_at DESC;
+    </select>
+    <select id="selectAllRecordLimited" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select student.id as id, student.name as name, event.mode as mode, event.accepted_at as accepted_at, event.created_at as created_at
+        from student, event
+        where student.id = event.student_id
+        order by created_at DESC
+        limit #{maxRecord,jdbcType=INTEGER} offset 0;
+    </select>
+</mapper>
