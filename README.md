@@ -44,5 +44,8 @@ This project support Swagger UI.
 1. Run CERS develop environment.
 1. Access http://localhost:8080/swagger-ui.html .
 
+## Terminal devices
+* [CERS-terminal](https://github.com/greenlaver/CERS-terminal) by Aonori.
+
 ## LICENSE
 Under MIT License.
