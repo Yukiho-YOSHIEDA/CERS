@@ -9,8 +9,14 @@ This system record someone entered or leaved the room.
 * docker-compose
 * Node.js v12.16.1
 
+## Downloads
+* [v1.0(latest)](https://github.com/Yukiho-YOSHIEDA/CERS/releases/download/v1.0/cers-1.0.jar)
+* [v0.1](https://github.com/Yukiho-YOSHIEDA/CERS/releases/download/v0.1/cers-0.0.1-SNAPSHOT.jar)
+
 ## How to run
 `$ java -jar cers.jar`
+* Default port is 8080.
+* When you want to change port number to 80, run `$ java -Dserver.port=80 -jar cers.jar`.
 
 ## How to run on development environment
 1. Clone this repository.
