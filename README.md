@@ -5,6 +5,8 @@
 ![Version 1.0](https://img.shields.io/badge/version-1.0-yellow.svg)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
+English | [日本語](README_ja.md)
+
 This system record someone entered or leaved the room.
 
 ![Screenshots](./screenshots.png)
