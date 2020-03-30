@@ -42,7 +42,7 @@
 1. ビルドに成功すると.jarファイルが`build/libs`に生成されます。
 
 ## API docs
-本プロジェクトはSwagger UIをサポートしています.
+本プロジェクトはSwagger UIをサポートしています。
 1. CERSの開発環境を実行してください。
 1. http://localhost:8080/swagger-ui.html にアクセスしてください。
 
