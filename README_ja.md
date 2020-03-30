@@ -5,7 +5,7 @@
 ![Version 1.0](https://img.shields.io/badge/version-1.0-yellow.svg)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-[English](README.md) | 日本語
+[English](./README.md) | 日本語
 
 部屋の入退室を記録するシステム
 
